@@ -1,0 +1,7 @@
+include = [
+    "base.toml"
+]
+
+# https://github.com/ethereum-optimism/ethereum-optimism.github.io/blob/master/data/bwAJNA/data.json
+[setting.bwAJNA_ADDRESS]
+defaultValue = "0x6c518f9D1a163379235816c543E62922a79863Fa"

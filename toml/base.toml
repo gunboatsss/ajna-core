@@ -1,0 +1,104 @@
+name = "ajna-finance"
+version = "0.10.0"
+description = "No Oracle, No Governance Borrowing Protocol"
+
+[setting.bwAJNA_ADDRESS]
+description = "Canonical bridged burn-wrapped AJNA token"
+
+[setting.salt]
+defaultValue = "AJNA"
+
+[contract.BorrowerActions]
+artifact = "BorrowerActions"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.KickerActions]
+artifact = "KickerActions"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.LenderActions]
+artifact = "LenderActions"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.LPActions]
+artifact = "LPActions"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.PoolCommons]
+artifact = "PoolCommons"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.PositionNFTSVG]
+artifact = "PositionNFTSVG"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.SettlerActions]
+artifact = "SettlerActions"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.TakerActions]
+artifact = "TakerActions"
+salt = "<%= settings.salt %>"
+create2 = true
+
+
+[contract.ERC20PoolFactory]
+artifact = "ERC20PoolFactory"
+args = [
+    "<%= settings.bwAJNA_ADDRESS %>"
+]
+libraries.BorrowerActions = "<%= contracts.BorrowerActions.address %>"
+libraries.LenderActions = "<%= contracts.LenderActions.address %>"
+libraries.LPActions = "<%= contracts.LPActions.address %>"
+libraries.KickerActions = "<%= contracts.KickerActions.address %>"
+libraries.SettlerActions = "<%= contracts.SettlerActions.address %>"
+libraries.TakerActions = "<%= contracts.TakerActions.address %>"
+libraries.PoolCommons = "<%= contracts.PoolCommons.address %>"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.ERC721PoolFactory]
+artifact = "ERC721PoolFactory"
+args = [
+    "<%= settings.bwAJNA_ADDRESS %>"
+]
+libraries.BorrowerActions = "<%= contracts.BorrowerActions.address %>"
+libraries.LenderActions = "<%= contracts.LenderActions.address %>"
+libraries.LPActions = "<%= contracts.LPActions.address %>"
+libraries.KickerActions = "<%= contracts.KickerActions.address %>"
+libraries.SettlerActions = "<%= contracts.SettlerActions.address %>"
+libraries.TakerActions = "<%= contracts.TakerActions.address %>"
+libraries.PoolCommons = "<%= contracts.PoolCommons.address %>"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.PoolInfoUtils]
+artifact = "PoolInfoUtils"
+libraries.PoolCommons = "<%= contracts.PoolCommons.address %>"
+salt = "<%= settings.salt %>"
+create2 = true
+
+[contract.PoolInfoUtilsMulticall]
+artifact = "PoolInfoUtilsMulticall"
+args = [
+    "<%= contracts.PoolInfoUtils.address %>"
+]
+salt = "<% settings.salt %>"
+create2 = true
+
+[contract.PositionManager]
+artifact = "PositionManager"
+args = [
+    "<%= contracts.ERC20PoolFactory.address %>",
+    "<%= contracts.ERC721PoolFactory.address %>"
+]
+libraries.PositionNFTSVG = "<%= contracts.PositionNFTSVG.address %>"
+salt = "<%= settings.salt %>"
+create2 = true
