@@ -1,0 +1,7 @@
+include = [
+    "base.toml"
+]
+
+# https://mapper.polygon.technology/ => Root chain 0x936Ab482d6bd111910a42849D3A51Ff80BB0A711
+[setting.bwAJNA_ADDRESS]
+defaultValue = "0xA63b19647787Da652D0826424460D1BBf43Bf9c6"

@@ -1,0 +1,7 @@
+include = [
+    "base.toml"
+]
+
+# Scroll L1 ERC20 Gateway Router => getL2ERC20Address https://etherscan.io/address/0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6#readProxyContract#F6
+[setting.bwAJNA_ADDRESS]
+defaultValue = "0xCC07D5935172e644723E585D18D17B5a81e743A5"
