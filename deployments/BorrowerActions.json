@@ -1,0 +1,184 @@
+{
+  "address": "0x422d470fb02206733Bb770D2A27d6d98f493af64",
+  "abi": [
+    {
+      "type": "event",
+      "name": "LoanStamped",
+      "inputs": [
+        {
+          "name": "borrowerAddress",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AmountLTMinDebt",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AuctionActive",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BorrowerNotSender",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BorrowerUnderCollateralized",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketIndexOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DustAmountNotExceeded",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InsufficientCollateral",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InsufficientLiquidity",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAmount",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "LimitIndexExceeded",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "LimitIndexExceeded",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NoDebt",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__Exp2InputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntUnderflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__LogInputTooSmall",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__SqrtNegativeInput",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__SqrtOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivFixedPointOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ZeroDebtToCollateral",
+      "inputs": []
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0x6b4a3942ce59ead2226c42397c532a6d0d0fed851c29d7dbe77fcd32a9c9852e",
+  "sourceName": "src/libraries/external/BorrowerActions.sol",
+  "contractName": "BorrowerActions",
+  "deployedOn": "contract.BorrowerActions",
+  "gasUsed": 2100149,
+  "gasCost": "1159115419"
+}
