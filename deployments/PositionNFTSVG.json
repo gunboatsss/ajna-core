@@ -1,0 +1,54 @@
+{
+  "address": "0x282112d32e10b4C2A484cb3f030529cbbDc27706",
+  "abi": [
+    {
+      "type": "function",
+      "name": "constructTokenURI",
+      "inputs": [
+        {
+          "name": "params_",
+          "type": "tuple",
+          "internalType": "struct PositionNFTSVG.ConstructTokenURIParams",
+          "components": [
+            {
+              "name": "collateralTokenSymbol",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "quoteTokenSymbol",
+              "type": "string",
+              "internalType": "string"
+            },
+            {
+              "name": "tokenId",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "owner",
+              "type": "address",
+              "internalType": "address"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "string",
+          "internalType": "string"
+        }
+      ],
+      "stateMutability": "pure"
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0xa86fe7ce798af1632c297a475d0cdd6e50c829cac112a1e42158799fa877a55e",
+  "sourceName": "src/libraries/external/PositionNFTSVG.sol",
+  "contractName": "PositionNFTSVG",
+  "deployedOn": "contract.PositionNFTSVG",
+  "gasUsed": 3310118,
+  "gasCost": "1000000000"
+}

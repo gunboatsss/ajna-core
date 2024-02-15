@@ -1,0 +1,6 @@
+include = [
+    "base.toml"
+]
+
+[setting.bwAJNA_ADDRESS]
+defaultValue = "0x8cf142283445a16Fa09A75BA56774051E1225b31"

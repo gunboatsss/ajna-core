@@ -1,0 +1,360 @@
+{
+  "address": "0x394F11A7363bF246feaA432D20429AA9352bF1b3",
+  "abi": [
+    {
+      "type": "event",
+      "name": "BucketTake",
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "index",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "collateral",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "bondChange",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "isReward",
+          "type": "bool",
+          "indexed": false,
+          "internalType": "bool"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "BucketTakeLPAwarded",
+      "inputs": [
+        {
+          "name": "taker",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "kicker",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "lpAwardedTaker",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "lpAwardedKicker",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "ReserveAuction",
+      "inputs": [
+        {
+          "name": "claimableReservesRemaining",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "auctionPrice",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "currentBurnEpoch",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Take",
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "collateral",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "bondChange",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "isReward",
+          "type": "bool",
+          "indexed": false,
+          "internalType": "bool"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AmountLTMinDebt",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AuctionNotTakeable",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "AuctionPriceGtBucketPrice",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketBankruptcyBlock",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketIndexOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketPriceOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "CollateralRoundingNeededButNotPossible",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DustAmountNotExceeded",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InsufficientCollateral",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InsufficientLiquidity",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAmount",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAmount",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NoAuction",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NoReservesAuction",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__CeilOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__DivInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__DivOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__Exp2InputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntUnderflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__LogInputTooSmall",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__SqrtNegativeInput",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__SqrtOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivFixedPointOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "denominator",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "ZeroDebtToCollateral",
+      "inputs": []
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0x643baf063a2259599c67638306a55c1aac961728ca615a8ae8d356bb1a268a30",
+  "sourceName": "src/libraries/external/TakerActions.sol",
+  "contractName": "TakerActions",
+  "deployedOn": "contract.TakerActions",
+  "gasUsed": 3551118,
+  "gasCost": "1000000000"
+}

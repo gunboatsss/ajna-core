@@ -1,0 +1,334 @@
+{
+  "address": "0x3Ab3F0b84111B67Ee2f986d8f665d8D9ad02cbCE",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "ajna_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "ERC721_NON_SUBSET_HASH",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "MAX_RATE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "MIN_RATE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "ajna",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "deployPool",
+      "inputs": [
+        {
+          "name": "collateral_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "quote_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "interestRate_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "deployPool",
+      "inputs": [
+        {
+          "name": "collateral_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "quote_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "tokenIds_",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        },
+        {
+          "name": "interestRate_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "deployedPools",
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "deployedPoolsList",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getDeployedPoolsList",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]",
+          "internalType": "address[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getNFTSubsetHash",
+      "inputs": [
+        {
+          "name": "tokenIds_",
+          "type": "uint256[]",
+          "internalType": "uint256[]"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "pure"
+    },
+    {
+      "type": "function",
+      "name": "getNumberOfDeployedPools",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "implementation",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract ERC721Pool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "PoolCreated",
+      "inputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "subsetHash_",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "CreateFail",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DecimalsNotCompliant",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DeployQuoteCollateralSameToken",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DeployWithZeroAddress",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NFTNotSupported",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PoolAlreadyExists",
+      "inputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PoolInterestRateInvalid",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "TokenIdSubsetInvalid",
+      "inputs": []
+    }
+  ],
+  "constructorArgs": [
+    "0x8cf142283445a16Fa09A75BA56774051E1225b31"
+  ],
+  "linkedLibraries": {
+    "src/libraries/external/BorrowerActions.sol": {
+      "BorrowerActions": "0xe437B2B8441672E3A526Cb9237405CBC63b10FB6"
+    },
+    "src/libraries/external/KickerActions.sol": {
+      "KickerActions": "0xbFB7273aEB9dC71A03f38a23562E5945ed32DAAc"
+    },
+    "src/libraries/external/LPActions.sol": {
+      "LPActions": "0xDbD883652d78f10d5C1A7176aE50f54De9e26D47"
+    },
+    "src/libraries/external/LenderActions.sol": {
+      "LenderActions": "0xc65cC875C8146927230DAbCfFAd9fDC8fdF9F28d"
+    },
+    "src/libraries/external/PoolCommons.sol": {
+      "PoolCommons": "0x128Cf370e20F969c9532dC9D25D403a309142929"
+    },
+    "src/libraries/external/SettlerActions.sol": {
+      "SettlerActions": "0x6577B032b375394c316F7ebADbE979253d41e01d"
+    },
+    "src/libraries/external/TakerActions.sol": {
+      "TakerActions": "0x394F11A7363bF246feaA432D20429AA9352bF1b3"
+    }
+  },
+  "deployTxnHash": "0x15885ba7d4a44896e2a46ab86071b404733d8518384c3dd1d561d440b3e6561b",
+  "sourceName": "src/ERC721PoolFactory.sol",
+  "contractName": "ERC721PoolFactory",
+  "deployedOn": "contract.ERC721PoolFactory",
+  "gasUsed": 6252314,
+  "gasCost": "1000000000"
+}

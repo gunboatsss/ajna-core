@@ -1,0 +1,261 @@
+{
+  "address": "0xbFB7273aEB9dC71A03f38a23562E5945ed32DAAc",
+  "abi": [
+    {
+      "type": "event",
+      "name": "BondWithdrawn",
+      "inputs": [
+        {
+          "name": "kicker",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "receiver",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "BucketBankruptcy",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "lpForfeited",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Kick",
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "debt",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "collateral",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "bond",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "KickReserveAuction",
+      "inputs": [
+        {
+          "name": "claimableReservesRemaining",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "auctionPrice",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "currentBurnEpoch",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RemoveQuoteToken",
+      "inputs": [
+        {
+          "name": "lender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "price",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "lpRedeemed",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "lup",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AuctionActive",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BorrowerOk",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketIndexOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InsufficientLiquidity",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "LimitIndexExceeded",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NoReserves",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__Exp2InputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntUnderflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__LogInputTooSmall",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivFixedPointOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PriceBelowLUP",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "ReserveAuctionTooSoon",
+      "inputs": []
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0x6a1351ed58093dee9a4e407e8137dff1a47a976500d7779f4c2ae0466062f327",
+  "sourceName": "src/libraries/external/KickerActions.sol",
+  "contractName": "KickerActions",
+  "deployedOn": "contract.KickerActions",
+  "gasUsed": 2168552,
+  "gasCost": "1000000000"
+}
