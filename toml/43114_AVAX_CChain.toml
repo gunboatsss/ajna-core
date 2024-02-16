@@ -1,0 +1,7 @@
+include = [
+    "base.toml"
+]
+
+[setting.bwAJNA_ADDRESS]
+defaultValue = "0xE055Ee581c637C419e55B8d5fFBA84375546f70f"
+description = "Wormhole (Portal Bridge) bridged bwAJNA"

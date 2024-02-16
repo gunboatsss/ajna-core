@@ -1,0 +1,245 @@
+{
+  "address": "0x9EdcD1fEc19E5baA98fa4911C90C2162524750d2",
+  "abi": [
+    {
+      "type": "event",
+      "name": "AuctionNFTSettle",
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "collateral",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "lp",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "index",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "AuctionSettle",
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "collateral",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "BucketBankruptcy",
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256",
+          "indexed": true,
+          "internalType": "uint256"
+        },
+        {
+          "name": "lpForfeited",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "Settle",
+      "inputs": [
+        {
+          "name": "borrower",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "settledDebt",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "AuctionNotClearable",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketBankruptcyBlock",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketIndexOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "BucketPriceOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAmount",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NoAuction",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__CeilOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__DivInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__DivOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__Exp2InputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__FromIntUnderflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__LogInputTooSmall",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivFixedPointOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "denominator",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0xe50808847d425b9280df9f6c55e86db1244d80fdea4dae3ea441a3ee4ac57c0f",
+  "sourceName": "src/libraries/external/SettlerActions.sol",
+  "contractName": "SettlerActions",
+  "deployedOn": "contract.SettlerActions",
+  "gasUsed": 2135163,
+  "gasCost": "26500000000"
+}

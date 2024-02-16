@@ -1,0 +1,308 @@
+{
+  "address": "0x6A91429425Fb992A9cf300aD215e4469d0D1A75A",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "poolInfoUtils_",
+          "type": "address",
+          "internalType": "contract PoolInfoUtils"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "poolBalanceDetails",
+      "inputs": [
+        {
+          "name": "ajnaPool_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "index_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "quoteTokenAddress_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "collateralTokenAddress_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "isNFT_",
+          "type": "bool",
+          "internalType": "bool"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "poolBalanceDetails_",
+          "type": "tuple",
+          "internalType": "struct PoolInfoUtilsMulticall.PoolBalanceDetails",
+          "components": [
+            {
+              "name": "debt",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "accruedDebt",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "debtInAuction",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "t0Debt2ToCollateral",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "depositUpToIndex",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "quoteTokenBalance",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "collateralTokenBalance",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "poolDetailsMulticall",
+      "inputs": [
+        {
+          "name": "ajnaPool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "poolLoansInfo_",
+          "type": "tuple",
+          "internalType": "struct PoolInfoUtilsMulticall.PoolLoansInfo",
+          "components": [
+            {
+              "name": "poolSize",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "loansCount",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "maxBorrower",
+              "type": "address",
+              "internalType": "address"
+            },
+            {
+              "name": "pendingInflator",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "pendingInterestFactor",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        },
+        {
+          "name": "poolPriceInfo_",
+          "type": "tuple",
+          "internalType": "struct PoolInfoUtilsMulticall.PoolPriceInfo",
+          "components": [
+            {
+              "name": "hpb",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "hpbIndex",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "htp",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "htpIndex",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "lup",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "lupIndex",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        },
+        {
+          "name": "poolRatesAndFees_",
+          "type": "tuple",
+          "internalType": "struct PoolInfoUtilsMulticall.PoolRatesAndFees",
+          "components": [
+            {
+              "name": "lenderInterestMargin",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "borrowFeeRate",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "depositFeeRate",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        },
+        {
+          "name": "poolReservesInfo_",
+          "type": "tuple",
+          "internalType": "struct PoolInfoUtilsMulticall.PoolReservesInfo",
+          "components": [
+            {
+              "name": "reserves",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "claimableReserves",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "claimableReservesRemaining",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "auctionPrice",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "timeRemaining",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        },
+        {
+          "name": "poolUtilizationInfo_",
+          "type": "tuple",
+          "internalType": "struct PoolInfoUtilsMulticall.PoolUtilizationInfo",
+          "components": [
+            {
+              "name": "poolMinDebtAmount",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "poolCollateralization",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "poolActualUtilization",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "poolTargetUtilization",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "poolInfoUtils",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract PoolInfoUtils"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "poolRatesAndFeesMulticall",
+      "inputs": [
+        {
+          "name": "ajnaPool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "lenderInterestMargin",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "borrowFeeRate",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "depositFeeRate",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    }
+  ],
+  "constructorArgs": [
+    "0x2baB4c287cF33a6eC373CFE152FdbA299B653F7D"
+  ],
+  "linkedLibraries": {},
+  "deployTxnHash": "0xa250731b5a612b6aa29366b8daf24341aa9dabf711d51939cd5f05a77098ecd4",
+  "sourceName": "src/PoolInfoUtilsMulticall.sol",
+  "contractName": "PoolInfoUtilsMulticall",
+  "deployedOn": "contract.PoolInfoUtilsMulticall",
+  "gasUsed": 885650,
+  "gasCost": "26000000000"
+}

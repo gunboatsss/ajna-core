@@ -1,0 +1,271 @@
+{
+  "address": "0xD72A27f21961EA8425275585d797F742fa0875dD",
+  "abi": [
+    {
+      "type": "constructor",
+      "inputs": [
+        {
+          "name": "ajna_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "ERC20_NON_SUBSET_HASH",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "MAX_RATE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "MIN_RATE",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "ajna",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "deployPool",
+      "inputs": [
+        {
+          "name": "collateral_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "quote_",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "interestRate_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "nonpayable"
+    },
+    {
+      "type": "function",
+      "name": "deployedPools",
+      "inputs": [
+        {
+          "name": "",
+          "type": "bytes32",
+          "internalType": "bytes32"
+        },
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        },
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "deployedPoolsList",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "address"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getDeployedPoolsList",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]",
+          "internalType": "address[]"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "getNumberOfDeployedPools",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "implementation",
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "",
+          "type": "address",
+          "internalType": "contract ERC20Pool"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "event",
+      "name": "PoolCreated",
+      "inputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "subsetHash_",
+          "type": "bytes32",
+          "indexed": false,
+          "internalType": "bytes32"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "CreateFail",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DecimalsNotCompliant",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DeployQuoteCollateralSameToken",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "DeployWithZeroAddress",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PoolAlreadyExists",
+      "inputs": [
+        {
+          "name": "pool_",
+          "type": "address",
+          "internalType": "address"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PoolInterestRateInvalid",
+      "inputs": []
+    }
+  ],
+  "constructorArgs": [
+    "0xE055Ee581c637C419e55B8d5fFBA84375546f70f"
+  ],
+  "linkedLibraries": {
+    "src/libraries/external/BorrowerActions.sol": {
+      "BorrowerActions": "0x422d470fb02206733Bb770D2A27d6d98f493af64"
+    },
+    "src/libraries/external/KickerActions.sol": {
+      "KickerActions": "0xf419056B545783BbFfEAB4d0aA057a52FbA4F4fd"
+    },
+    "src/libraries/external/LPActions.sol": {
+      "LPActions": "0xb257A98a3549a0B36b9001d0eDc9e75d313d5c8e"
+    },
+    "src/libraries/external/LenderActions.sol": {
+      "LenderActions": "0x7456CF19C121842FE2C3a888075A11d51ED63b98"
+    },
+    "src/libraries/external/PoolCommons.sol": {
+      "PoolCommons": "0xe77bfEeB83CD09bD9b598a90f7Ce7faE02c71540"
+    },
+    "src/libraries/external/SettlerActions.sol": {
+      "SettlerActions": "0x9EdcD1fEc19E5baA98fa4911C90C2162524750d2"
+    },
+    "src/libraries/external/TakerActions.sol": {
+      "TakerActions": "0xb127207d673977e14f31f52a14AD07e6a512c5fA"
+    }
+  },
+  "deployTxnHash": "0x78563c1a002d40f55239b45c957b3063519152b97ee04132b1f48a7f4ece97f2",
+  "sourceName": "src/ERC20PoolFactory.sol",
+  "contractName": "ERC20PoolFactory",
+  "deployedOn": "contract.ERC20PoolFactory",
+  "gasUsed": 5805826,
+  "gasCost": "26500000000"
+}
