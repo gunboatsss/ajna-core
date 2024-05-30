@@ -1,0 +1,409 @@
+{
+  "address": "0xb3EF6B9E5829487293fAeC5768BeA9922fD78E1a",
+  "abi": [
+    {
+      "type": "function",
+      "name": "debtInfo",
+      "inputs": [
+        {
+          "name": "poolBalances_",
+          "type": "tuple",
+          "internalType": "struct PoolBalancesState",
+          "components": [
+            {
+              "name": "pledgedCollateral",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "t0DebtInAuction",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "t0Debt",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        },
+        {
+          "name": "inflatorState_",
+          "type": "tuple",
+          "internalType": "struct InflatorState",
+          "components": [
+            {
+              "name": "inflator",
+              "type": "uint208",
+              "internalType": "uint208"
+            },
+            {
+              "name": "inflatorUpdate",
+              "type": "uint48",
+              "internalType": "uint48"
+            }
+          ]
+        },
+        {
+          "name": "interestState_",
+          "type": "tuple",
+          "internalType": "struct InterestState",
+          "components": [
+            {
+              "name": "interestRate",
+              "type": "uint208",
+              "internalType": "uint208"
+            },
+            {
+              "name": "interestRateUpdate",
+              "type": "uint48",
+              "internalType": "uint48"
+            },
+            {
+              "name": "debt",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "meaningfulDeposit",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "t0Debt2ToCollateral",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "debtCol",
+              "type": "uint256",
+              "internalType": "uint256"
+            },
+            {
+              "name": "lupt0Debt",
+              "type": "uint256",
+              "internalType": "uint256"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "lenderInterestMargin",
+      "inputs": [
+        {
+          "name": "mau_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "pure"
+    },
+    {
+      "type": "function",
+      "name": "pendingInflator",
+      "inputs": [
+        {
+          "name": "inflator_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "inflatorUpdate",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "interestRate_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "view"
+    },
+    {
+      "type": "function",
+      "name": "pendingInterestFactor",
+      "inputs": [
+        {
+          "name": "interestRate_",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "elapsed_",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ],
+      "stateMutability": "pure"
+    },
+    {
+      "type": "event",
+      "name": "Flashloan",
+      "inputs": [
+        {
+          "name": "receiver",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "token",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "ResetInterestRate",
+      "inputs": [
+        {
+          "name": "oldRate",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "newRate",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "UpdateInterestRate",
+      "inputs": [
+        {
+          "name": "oldRate",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        },
+        {
+          "name": "newRate",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "BucketPriceOutOfBounds",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "FlashloanCallbackFailed",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "FlashloanIncorrectBalance",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__CeilOverflow",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__DivInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__DivOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__Exp2InputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__ExpInputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__LogInputTooSmall",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "int256",
+          "internalType": "int256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulInputTooSmall",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "PRBMathSD59x18__MulOverflow",
+      "inputs": [
+        {
+          "name": "rAbs",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathUD60x18__Exp2InputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathUD60x18__ExpInputTooBig",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMathUD60x18__LogInputTooSmall",
+      "inputs": [
+        {
+          "name": "x",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivFixedPointOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    },
+    {
+      "type": "error",
+      "name": "PRBMath__MulDivOverflow",
+      "inputs": [
+        {
+          "name": "prod1",
+          "type": "uint256",
+          "internalType": "uint256"
+        },
+        {
+          "name": "denominator",
+          "type": "uint256",
+          "internalType": "uint256"
+        }
+      ]
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0xfc5358ebcb4fb57276ce13abf390493bc88332b827acf5ab2fa802001ff2a3e9",
+  "sourceName": "src/libraries/external/PoolCommons.sol",
+  "contractName": "PoolCommons",
+  "deployedOn": "contract.PoolCommons",
+  "gasUsed": 2548560,
+  "gasCost": "300000000"
+}

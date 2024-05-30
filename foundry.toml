@@ -20,6 +20,16 @@ rpc_storage_caching = { chains = ["mainnet"], endpoints = "all" }
 optimizer           = true
 optimizer_runs      = 0
 fs_permissions      = [{ access = "read-write", path = "./"}]
+libraries = [
+    'src/libraries/external/BorrowerActions.sol:BorrowerActions:0x9eeAc514Caf47179fc4538E5a554A49ebcb91704',
+    'src/libraries/external/KickerActions.sol:KickerActions:0xdeCEE01C9E8274BC4aD40B5da352058D0615a88A',
+    'src/libraries/external/LenderActions.sol:LenderActions:0x4fc119EB28793180C389dC5C5dB447fc61aB131D',
+    'src/libraries/external/LPActions.sol:LPActions:0xf877F3Bc6B918A1378EAC388d2e1Ed8779bd7Beb',
+    'src/libraries/external/PoolCommons.sol:PoolCommons:0xb3EF6B9E5829487293fAeC5768BeA9922fD78E1a',
+    'src/libraries/external/PositionNFTSVG.sol:PositionNFTSVG:0x6594E77551d1572Fac303979cC0D434dfccEDF7D',
+    'src/libraries/external/SettlerActions.sol:SettlerActions:0xF060ea369EaD0958C4473AcA894B41dF35eD2BdE',
+    'src/libraries/external/TakerActions.sol:TakerActions:0x1c7656Bd77cFd201092D8F96C2fd4d9acC949334'
+]
 
 [fuzz]
 runs = 300

@@ -1,0 +1,199 @@
+{
+  "address": "0xf877F3Bc6B918A1378EAC388d2e1Ed8779bd7Beb",
+  "abi": [
+    {
+      "type": "event",
+      "name": "ApproveLPTransferors",
+      "inputs": [
+        {
+          "name": "lender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "transferors",
+          "type": "address[]",
+          "indexed": false,
+          "internalType": "address[]"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "DecreaseLPAllowance",
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "spender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "indexes",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        },
+        {
+          "name": "amounts",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "IncreaseLPAllowance",
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "spender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "indexes",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        },
+        {
+          "name": "amounts",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RevokeLPAllowance",
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "spender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "indexes",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "RevokeLPTransferors",
+      "inputs": [
+        {
+          "name": "lender",
+          "type": "address",
+          "indexed": true,
+          "internalType": "address"
+        },
+        {
+          "name": "transferors",
+          "type": "address[]",
+          "indexed": false,
+          "internalType": "address[]"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "event",
+      "name": "TransferLP",
+      "inputs": [
+        {
+          "name": "owner",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "newOwner",
+          "type": "address",
+          "indexed": false,
+          "internalType": "address"
+        },
+        {
+          "name": "indexes",
+          "type": "uint256[]",
+          "indexed": false,
+          "internalType": "uint256[]"
+        },
+        {
+          "name": "lp",
+          "type": "uint256",
+          "indexed": false,
+          "internalType": "uint256"
+        }
+      ],
+      "anonymous": false
+    },
+    {
+      "type": "error",
+      "name": "BucketBankruptcyBlock",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidAllowancesInput",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "InvalidIndex",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "NoAllowance",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "TransferToSameOwner",
+      "inputs": []
+    },
+    {
+      "type": "error",
+      "name": "TransferorNotApproved",
+      "inputs": []
+    }
+  ],
+  "constructorArgs": [],
+  "linkedLibraries": {},
+  "deployTxnHash": "0xd3cd582d087f2953cdb76707291e16241807cba5c91d4d1e486ef5ca3b68cec7",
+  "sourceName": "src/libraries/external/LPActions.sol",
+  "contractName": "LPActions",
+  "deployedOn": "contract.LPActions",
+  "gasUsed": 693165,
+  "gasCost": "300000000"
+}

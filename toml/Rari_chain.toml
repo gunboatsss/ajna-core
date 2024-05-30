@@ -1,0 +1,7 @@
+include = [
+    "base.toml"
+]
+
+[setting.bwAJNA_ADDRESS]
+defaultValue = "0x98BE1b64fD73Ac168F9b588bFeCDe8471999Efbc"
+description = "bridged bwAJNA"
