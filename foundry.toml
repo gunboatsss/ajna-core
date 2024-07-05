@@ -30,7 +30,8 @@ libraries = [
     'src/libraries/external/SettlerActions.sol:SettlerActions:0xF060ea369EaD0958C4473AcA894B41dF35eD2BdE',
     'src/libraries/external/TakerActions.sol:TakerActions:0x1c7656Bd77cFd201092D8F96C2fd4d9acC949334'
 ]
-
+# evm_version = 'paris'
+solc = '0.8.18'
 [fuzz]
 runs = 300
 

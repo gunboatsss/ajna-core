@@ -15,5 +15,5 @@ forge verify-contract $(jq -r .address ./deployments/ERC721PoolFactory.json) src
 forge verify-contract $(jq -r .address ./deployments/PoolInfoUtils.json) src/PoolInfoUtils.sol:PoolInfoUtils -c $CHAIN --watch --verifier blockscout
 forge verify-contract $(jq -r .address ./deployments/PoolInfoUtilsMulticall.json) src/PoolInfoUtilsMulticall.sol:PoolInfoUtilsMulticall -c $CHAIN --constructor-args $(cast abi-encode "f(address)" $(jq -r .address ./deployments/PoolInfoUtils.json)) --watch --verifier blockscout
 forge verify-contract $(jq -r .address ./deployments/PositionManager.json) src/PositionManager.sol:PositionManager -c $CHAIN --constructor-args $(cast abi-encode "f(address,address)" $(jq -r .address ./deployments/ERC20PoolFactory.json) $(jq -r .address ./deployments/ERC721PoolFactory.json)) --watch --verifier blockscout
-forge verify-contract 0x687Ed38001cD827668E1E07a204C41c36f0FAD3e src/ERC20Pool.sol:ERC20Pool -c $CHAIN --watch
-forge verify-contract 0x996628A807F80E746e98447b96950F1E18F0Fe94 src/ERC721Pool.sol:ERC721Pool -c $CHAIN --watch
+forge verify-contract 0x687Ed38001cD827668E1E07a204C41c36f0FAD3e src/ERC20Pool.sol:ERC20Pool -c $CHAIN --watch --verifier blockscout
+forge verify-contract 0x996628A807F80E746e98447b96950F1E18F0Fe94 src/ERC721Pool.sol:ERC721Pool -c $CHAIN --watch --verifier blockscout
